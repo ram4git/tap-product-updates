@@ -1,5 +1,7 @@
 module.exports = {
   theme: {
+    mode: 'jit',
+    purge: ['./components/**/*.js', './pages/**/*.js', './studio/**/*.js'],
     extend: {
       colors: {
         'accent-1': '#FAFAFA',
@@ -7,6 +9,7 @@ module.exports = {
         'accent-7': '#333',
         success: '#0070f3',
         cyan: '#79FFE1',
+        'tap-primary': '#1c88a3',
       },
       spacing: {
         28: '7rem',
@@ -28,5 +31,6 @@ module.exports = {
         medium: '0 8px 30px rgba(0, 0, 0, 0.12)',
       },
     },
-  }
-}
+  },
+  plugins: [require('@tailwindcss/typography')],
+};
