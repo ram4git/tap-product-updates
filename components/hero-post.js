@@ -28,7 +28,7 @@ export default function HeroPost({
               url={coverImage}
             />
           )}
-          <div className="flex pb-2 md:pb-4 items-center flex-col absolute inset-x-0 bottom-0 backdrop-filter backdrop-blur-sm rounded-b-lg">
+          <div className="flex pb-2 md:pb-4 items-center flex-col absolute inset-x-0 bottom-0 backdrop-filter backdrop-blur-sm rounded-b-lg cursor-pointer z-10">
             <Link as={`/posts/${slug}`} href="/posts/[slug]">
               <>
                 <h3 className="text-4xl lg:text-6xl leading-tight font-medium text-white px-4 text-center bg-blend-darken">

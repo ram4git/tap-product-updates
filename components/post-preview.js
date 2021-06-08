@@ -12,7 +12,7 @@ export default function PostPreview({
   slug,
 }) {
   return (
-    <div className="px-4 py-6">
+    <div className="px-2 md:px-4 py-6">
       <div className="mb-2">
         <CoverImage
           slug={slug}
@@ -21,12 +21,12 @@ export default function PostPreview({
           url={imageBuilder(coverImage).url()}
         />
       </div>
-      <h3 className="text-3xl leading-snug">
+      <h3 className="text-xl md:text-3xl leading-snug">
         <Link as={`/posts/${slug}`} href="/posts/[slug]">
           <a className="hover:underline text-tap-primary">{title}</a>
         </Link>
       </h3>
-      <div className="text-lg mb-4 text-gray-600">
+      <div className="text-lg md:text-lg mb-4 text-gray-600">
         <Date dateString={date} />
       </div>
       <p className="text-lg leading-relaxed mb-4">{excerpt}</p>

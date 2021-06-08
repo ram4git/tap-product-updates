@@ -43,7 +43,7 @@ export default function Post({post, morePosts, preview}) {
                 coverVideo={post.videoUrl}
               />
               {post.tagline ? (
-                <h1 className="text-3xl text-tap-primary text-center">
+                <h1 className="text-lg mx:text-xl lg:text-3xl text-tap-primary text-center py-2">
                   {post.tagline}
                 </h1>
               ) : null}
