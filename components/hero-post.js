@@ -44,7 +44,7 @@ export default function HeroPost({
         {tagline ? (
           <a href={`/posts/${slug}`}>
             <div>
-              <h1 className="text-3xl text-center text-tap-primary py-2">
+              <h1 className="text-lg md:text-xl lg:text-3xl text-center text-tap-primary py-2">
                 {tagline}
               </h1>
               <h1 className="text-lg pb-8 text-blue-500 cursor-pointer text-center">
