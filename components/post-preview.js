@@ -12,8 +12,8 @@ export default function PostPreview({
   slug,
 }) {
   return (
-    <div className="px-4">
-      <div className="mb-5">
+    <div className="px-4 py-6">
+      <div className="mb-2">
         <CoverImage
           slug={slug}
           title={title}

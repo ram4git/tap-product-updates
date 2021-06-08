@@ -23,42 +23,27 @@ export default function Post({post, morePosts, preview}) {
     return <ErrorPage statusCode={404} />;
   }
   return (
-    <Layout preview={preview}>
-      <Container>
-        {embed ? null : <Header />}
-        {router.isFallback ? (
-          <PostTitle>Loading…</PostTitle>
-        ) : (
-          <>
-            <article>
-              <Head>
-                <title>{post.title}</title>
-                {/* <meta property="og:image" content={post.ogImage.url} /> */}
-              </Head>
-              <PostHeader
-                title={post.title}
-                coverImage={post.coverImage}
-                date={post.date}
-                author={post.author}
-                coverVideo={post.videoUrl}
-              />
-              {post.tagline ? (
-                <h1 className="text-3xl text-tap-primary text-center">
-                  {post.tagline}
-                </h1>
-              ) : null}
-              <PostBody content={post.body} />
-            </article>
-
-            {/* <Comments comments={post.comments} /> */}
-            {/* <Form _id={post._id} /> */}
-
-            <SectionSeparator />
-            {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-          </>
-        )}
-      </Container>
-    </Layout>
+    <div className="no-scrollbar overflow-y-visible">
+      {router.isFallback ? (
+        <PostTitle>Loading…</PostTitle>
+      ) : (
+        <>
+          <article className="max-w-8xl mx-auto px-4">
+            <Head>
+              <title>{post.title}</title>
+            </Head>
+            <PostHeader
+              title={post.title}
+              coverImage={post.coverImage}
+              date={post.date}
+              author={post.author}
+              videoUrl={post.videoUrl}
+            />
+            <PostBody content={post.body} />
+          </article>
+        </>
+      )}
+    </div>
   );
 }
 

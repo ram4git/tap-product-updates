@@ -1,21 +1,58 @@
 /* purgecss start ignore */
 @tailwind base;
 @tailwind components;
-article a {
-    color: rgb(49, 49, 182);
-    text-decoration: underline;
-}
+
 /* purgecss end ignore */
 @tailwind utilities;
 
-
 @layer components {
-    .tap-title{
-        @apply bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500;
-    }
+  .tap-title {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500;
+  }
 
-    .tap-title-red {
-        @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500;
-    }
+  .tap-title-red {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500;
+  }
+
+  article a {
+    color: rgb(49, 49, 182);
+    text-decoration: underline;
+  }
+
+  .prose h1 {
+    color: #1c88a3;
+    @apply text-5xl tap-title;
+  }
+
+  .prose h2 {
+    @apply text-4xl tap-title-red;
+  }
+
+  .prose h3 {
+    color: #1c88a3;
+    @apply text-3xl;
+  }
+
+  .prose h4 {
+    color: #1c88a3;
+    @apply text-2xl;
+  }
+
+  .prose > h1 {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500;
+  }
 }
 
+@layer utilities {
+  @variants responsive {
+    /* Chrome, Safari and Opera */
+    .::-webkit-scrollbar {
+      display: none;
+    }
+
+    .no-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+  }
+}

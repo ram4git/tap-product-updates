@@ -1,6 +1,7 @@
 import Avatar from '../components/avatar';
 import Date from '../components/date';
 import CoverImage from '../components/cover-image';
+import CoverVideo from '../components/cover-video';
 import Link from 'next/link';
 
 export default function HeroPost({
@@ -10,32 +11,48 @@ export default function HeroPost({
   excerpt,
   author,
   slug,
+  tagline,
+  coverVideo,
 }) {
   return (
     <section>
-      <div className="mb-2 md:mb-4">
-        <CoverImage
-          slug={slug}
-          imageObject={coverImage}
-          title={title}
-          url={coverImage}
-        />
-      </div>
-      <div className="md:grid md:grid-cols-2 md:col-gap-16 lg:col-gap-8 mb-20 md:mb-28">
-        <div>
-          <h3 className="text-4xl lg:text-6xl leading-tight font-medium text-tap-primary">
+      <div className="mb-12 md:mb-16">
+        <div className="relative rounded-lg overflow-hidden">
+          {coverVideo ? (
+            <CoverVideo title={title} videoUrl={coverVideo} />
+          ) : (
+            <CoverImage
+              slug={slug}
+              imageObject={coverImage}
+              title={title}
+              url={coverImage}
+            />
+          )}
+          <div className="flex pb-2 md:pb-4 items-center flex-col absolute inset-x-0 bottom-0 backdrop-filter backdrop-blur-sm rounded-b-lg">
             <Link as={`/posts/${slug}`} href="/posts/[slug]">
-              <a className=" hover:underline">{title}</a>
+              <>
+                <h3 className="text-4xl lg:text-6xl leading-tight font-medium text-white px-4 text-center bg-blend-darken">
+                  <a className=" hover:underline">{title}</a>
+                </h3>
+                <div className="text-xl text-gray-100 font-bold">
+                  <Date dateString={date} />
+                </div>
+              </>
             </Link>
-          </h3>
-          <div className="mb-4 md:mb-0 text-xl text-gray-800">
-            <Date dateString={date} />
           </div>
         </div>
-        {/* <div>
-          <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
-          <Avatar name={author?.name} picture={author?.picture} />
-        </div> */}
+        {tagline ? (
+          <a href={`/posts/${slug}`}>
+            <div>
+              <h1 className="text-3xl text-center text-tap-primary py-2">
+                {tagline}
+              </h1>
+              <h1 className="text-lg pb-8 text-blue-500 cursor-pointer text-center">
+                read more...
+              </h1>
+            </div>
+          </a>
+        ) : null}
       </div>
     </section>
   );
