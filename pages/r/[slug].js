@@ -23,7 +23,7 @@ export default function Post({post, morePosts, preview}) {
     return <ErrorPage statusCode={404} />;
   }
   return (
-    <div className="no-scrollbar overflow-y-visible">
+    <div className="no-scrollbar overflow-y-hidden">
       {router.isFallback ? (
         <PostTitle>Loading…</PostTitle>
       ) : (

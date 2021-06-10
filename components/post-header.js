@@ -24,9 +24,7 @@ export default function PostHeader({
           <CoverImage title={title} imageObject={coverImage} url={coverImage} />
         )}
       </div>
-      <div className="max-w-2xl mx-auto">
-        <h1>{tagline}</h1>
-      </div>
+      <div className="max-w-2xl mx-auto"></div>
     </>
   );
 }
