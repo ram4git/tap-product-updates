@@ -9,7 +9,7 @@ export default function CoverVideo({title, url, videoUrl, slug}) {
       height={540}
       src={videoUrl}
       alt={`Cover video for ${title}`}
-      frameborder="0"
+      frameBorder="0"
       allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
       className=
       {cn('shadow-lg overflow-hidden bg-yellow-500 rounded-lg sm:rounded-lg', {
