@@ -1,6 +1,7 @@
 module.exports = {
   mode: 'jit',
   purge: ['./components/**/*.js', './pages/**/*.js', './studio/**/*.js'],
+  darkMode: false,
   theme: {
     extend: {
       colors: {
@@ -10,7 +11,6 @@ module.exports = {
         success: '#0070f3',
         cyan: '#79FFE1',
         'tap-primary': '#1c88a3',
-        'tap-blue': '#0e5a8a',
       },
       spacing: {
         28: '7rem',

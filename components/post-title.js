@@ -1,7 +1,7 @@
 export default function PostTitle({children}) {
   return (
-    <h1 className="w-full text-4xl lg:text-6xl font-bold tracking-tighter leading-loose md:leading-none text-center md:text-left tap-title">
-      {children}
-    </h1>
+    <p className="text-4xl py-2 lg:text-6xl font-bold tracking-tighter leading-loose md:leading-none text-center md:text-left">
+      <span className="tap-title">{children}</span>
+    </p>
   );
 }

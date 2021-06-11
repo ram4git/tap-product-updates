@@ -1,8 +1,5 @@
-/* purgecss start ignore */
 @tailwind base;
 @tailwind components;
-
-/* purgecss end ignore */
 @tailwind utilities;
 
 @layer components {
@@ -19,21 +16,16 @@
     text-decoration: underline;
   }
 
-  .prose h1 {
-    color: #1c88a3;
-    @apply text-5xl tap-title;
-  }
-
-  .prose h2 {
+  .prose > h2 {
     @apply text-4xl tap-title-red;
   }
 
-  .prose h3 {
+  .prose > h3 {
     color: #1c88a3;
     @apply text-3xl;
   }
 
-  .prose h4 {
+  .prose > h4 {
     color: #1c88a3;
     @apply text-2xl;
   }

@@ -18,9 +18,9 @@ export default function Intro() {
             className="mx-auto-0"
           />
         )}
-        <h1 className="text-center text-4xl md:text-6xl font-bold tracking-tighter leading-tight bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500">
+        <p className="text-center text-4xl md:text-6xl font-bold tracking-tighter leading-tight bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500">
           Product Updates
-        </h1>
+        </p>
       </div>
     </section>
   );
