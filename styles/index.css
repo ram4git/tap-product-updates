@@ -11,27 +11,43 @@
     @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500;
   }
 
+  h1 {
+    @apply text-6xl;
+  }
+
+  h2 {
+    @apply text-4xl;
+  }
+
+  h3 {
+    @apply text-3xl;
+  }
+
+  h4 {
+    @apply text-2xl;
+  }
+
   article a {
     color: rgb(49, 49, 182);
     text-decoration: underline;
   }
 
-  .prose > h2 {
-    @apply text-4xl tap-title-red;
+  .prose h2 {
+    @apply !text-4xl tap-title-red;
   }
 
-  .prose > h3 {
+  .prose h3 {
     color: #1c88a3;
-    @apply text-3xl;
+    @apply !text-3xl;
   }
 
-  .prose > h4 {
+  .prose h4 {
     color: #1c88a3;
-    @apply text-2xl;
+    @apply !text-2xl;
   }
 
-  .prose > h1 {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500;
+  .prose h1 {
+    @apply !text-6xl bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500;
   }
 }
 

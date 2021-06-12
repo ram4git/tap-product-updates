@@ -1,13 +1,14 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
   mode: 'jit',
   purge: ['./components/**/*.js', './pages/**/*.js', './studio/**/*.js'],
   darkMode: false,
   theme: {
-    fontFamily: {
-      display: ['Open Sans'],
-      body: ['Open Sans'],
-    },
     extend: {
+      fontFamily: {
+        sans: ['Poppins', ...defaultTheme.fontFamily.sans],
+      },
       colors: {
         'accent-1': '#FAFAFA',
         'accent-2': '#EAEAEA',

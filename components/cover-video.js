@@ -6,7 +6,7 @@ export default function CoverVideo({title, url, videoUrl, slug}) {
   const video = (
     <iframe
       width={620}
-      height={270}
+      height={540}
       src={videoUrl}
       alt={`Cover video for ${title}`}
       frameBorder="0"
