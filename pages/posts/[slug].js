@@ -30,7 +30,7 @@ export default function Post({post, morePosts, preview}) {
           <PostTitle>Loading…</PostTitle>
         ) : (
           <>
-            <article>
+            <article className="pb-6">
               <Head>
                 <title>{post.title}</title>
                 {/* <meta property="og:image" content={post.ogImage.url} /> */}
@@ -49,9 +49,6 @@ export default function Post({post, morePosts, preview}) {
               ) : null}
               <PostBody content={post.body} />
             </article>
-
-            {/* <Comments comments={post.comments} /> */}
-            {/* <Form _id={post._id} /> */}
 
             <SectionSeparator />
             {morePosts.length > 0 && <MoreStories posts={morePosts} />}

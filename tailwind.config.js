@@ -3,6 +3,10 @@ module.exports = {
   purge: ['./components/**/*.js', './pages/**/*.js', './studio/**/*.js'],
   darkMode: false,
   theme: {
+    fontFamily: {
+      display: ['Open Sans'],
+      body: ['Open Sans'],
+    },
     extend: {
       colors: {
         'accent-1': '#FAFAFA',
@@ -33,5 +37,9 @@ module.exports = {
       },
     },
   },
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/line-clamp'),
+    require('@tailwindcss/aspect-ratio'),
+  ],
 };

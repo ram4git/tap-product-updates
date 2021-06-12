@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 export default function Header() {
   return (
-    <div className=" mb-6 lg:mb-20 mt-8 ">
+    <div className=" mb-6 lg:mb-18 mt-8 ">
       <Link href="/">
         <div className="mx-auto flex items-end prose-lgpy-2">
           <Image

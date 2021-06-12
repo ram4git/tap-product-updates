@@ -21,11 +21,11 @@ export default function PostPreview({
           url={imageBuilder(coverImage).url()}
         />
       </div>
-      <h3 className="text-xl md:text-3xl leading-snug">
+      <p className="text-xl md:text-3xl leading-snug tap-title-red line-clamp-2">
         <Link as={`/posts/${slug}`} href="/posts/[slug]">
-          <a className="hover:underline text-tap-primary">{title}</a>
+          <a className="hover:underline ">{title}</a>
         </Link>
-      </h3>
+      </p>
       <div className="text-lg md:text-lg mb-4 text-gray-600">
         <Date dateString={date} />
       </div>

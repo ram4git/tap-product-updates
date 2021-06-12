@@ -2,7 +2,7 @@ import PostPreview from '../components/post-preview';
 
 export default function MoreStories({posts}) {
   return (
-    <section>
+    <section className="pt-8">
       <p className="mb-8 text-2xl md:text-4xl lg:text-6xl font-bold tracking-tighter leading-tight py-2">
         <span className="tap-title">More Updates</span>
       </p>
