@@ -41,8 +41,7 @@ export default function Meta() {
       />
       <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&family=Roboto&display=swap"
-        rel="stylesheet"
-      />
+        rel="stylesheet"></link>
       <meta name="theme-color" content="#000" />
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <meta name="description" content="TAP Updates" />

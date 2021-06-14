@@ -12,7 +12,7 @@ export default function Header() {
             height="40"
             className="mx-auto-0 p-2"
           />
-          <p className="text-center pl-4 text-2xl md:text-2xl font-bold leading-loose tap-title-red">
+          <p className="text-center pl-4 text-lg md:text-2xl font-bold leading-loose tap-title-red">
             News & Product Updates
           </p>
         </div>
