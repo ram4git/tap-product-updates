@@ -12,7 +12,7 @@ export default function CoverVideo({title, url, videoUrl, slug}) {
       frameBorder="0"
       allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       className={cn(
-        'shadow-lg overflow-hidden rounded-lg sm:rounded-lg w-full bg-red-400',
+        'shadow-lg overflow-hidden rounded-lg sm:rounded-lg w-full',
         {
           'hover:shadow-medium transition-shadow duration-200': slug,
         },
