@@ -4,7 +4,7 @@ export default function MoreStories({posts}) {
   return (
     <section className="pt-8">
       <p className="mb-8 text-2xl md:text-4xl lg:text-6xl font-bold tracking-tighter leading-tight py-2">
-        <span className="tap-title">More Updates</span>
+        <span className="tap-title tracking-normal">More Updates</span>
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 md:col-gap-16 lg:col-gap-32 row-gap-20 md:row-gap-32 mb-6 md:mb-32">
         {posts.map(post => (

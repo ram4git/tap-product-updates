@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer components {
+  html * {
+    font-faily: proxima-nova;
+  }
+
   .tap-title {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500;
   }
